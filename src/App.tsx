@@ -7,6 +7,7 @@ import Input from './components/Input';
 import Oscar from './components/Oscar';
 import Person from './components/Person';
 import PersonList from './components/PersonList';
+import Loggedin from './components/state/Loggedin';
 import Status from './components/Status';
 
 function App() {
@@ -32,6 +33,7 @@ function App() {
       <Oscar >
       <Heading>Oscar goes to Anandhu Reji</Heading>
       </Oscar>
+      <Loggedin />
 
     <Input value='' handleChange={(event)=>console.log(event)}></Input>
       <Button handleClick={(event,id)=>{
