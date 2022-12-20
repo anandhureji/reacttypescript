@@ -1,8 +1,11 @@
 
 import './App.css';
 import Greet from './components/Greet';
+import Heading from './components/Heading';
+import Oscar from './components/Oscar';
 import Person from './components/Person';
 import PersonList from './components/PersonList';
+import Status from './components/Status';
 
 function App() {
 
@@ -11,7 +14,8 @@ function App() {
     last:"Reji",
   }
 
-  const nameList = [{
+  const nameList = [
+    {
       first:"Anandhu",
       last:"Reji"
     },
@@ -20,11 +24,17 @@ function App() {
       last:"Reji"
     },
   ]
+
   return (
     <div>
-      <Greet  name = "Anandhu" subject = "react-type-script" isLoggedin = {true} />
+      <Oscar >
+      <Heading>Oscar goes to Anandhu Reji</Heading>
+      </Oscar>
+      
+      <Greet  name = "Anandhu"  isLoggedin = {true} />
       <Person name={PersonName}/>
-      <PersonList names={nameList} />
+      <PersonList names = {nameList} />
+      <Status status='error' />
      
     </div>
   );
